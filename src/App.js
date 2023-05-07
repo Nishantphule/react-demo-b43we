@@ -17,10 +17,10 @@ const DateFunc = () =>{
   )
 }
 
-const User = ({name,index}) =>{
+const User = ({name}) =>{
   return (
     <>
-    <h2 key={index}> Hello {name} !</h2>
+    <h2> Hello {name} !</h2>
     </>
     )
 }
