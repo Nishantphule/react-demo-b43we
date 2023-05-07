@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+// function App() {
+//   return (
+//     <div className="App">
+      
+//     </div>
+//   );
+// }
+
+
+const DateFunc = () =>{
+  const now = new Date();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <h3>Hello  World!, it is {now.toString().slice(0,15)} <br/>Time- {now.toString().slice(15,25)} <br/> TimeZone- {now.toString().slice(25,55)}</h3>
+    </>
+  )
+}
+
+const User = ({name,index}) =>{
+  return (
+    <>
+    <h2 key={index}> Hello {name} !</h2>
+    </>
+    )
+}
+
+const App = () =>{
+  const users = ["Nishant","Sathish","Ajay"]
+  return (
+    <div>
+      <DateFunc/>
+      <h1>Greetings</h1>
+      {users.map((name,index)=><User key={index} name={name}/>)}
     </div>
-  );
+  )
 }
 
 export default App;
